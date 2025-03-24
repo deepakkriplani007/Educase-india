@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 271 91% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 80% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 271 91% 65%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html, body, #root {
+    @apply h-full;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom Input Styles */
+  .input-field {
+    @apply w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple transition-all duration-200;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-purple mb-1;
+  }
+
+  /* Custom Radio Button */
+  .radio-container {
+    @apply flex items-center gap-6 mt-2;
+  }
+
+  .radio-button {
+    @apply relative flex items-center;
+  }
+
+  .radio-label {
+    @apply ml-2 text-sm text-gray-700;
+  }
+
+  .radio-input {
+    @apply appearance-none w-4 h-4 rounded-full border border-gray-300 checked:border-purple checked:border-4 transition-all duration-200;
+  }
+}
